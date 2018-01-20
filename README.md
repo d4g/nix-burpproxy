@@ -8,7 +8,7 @@ burp proxy package for nixos
 - add the following to /etx/nixos/configuration.nix
 ```nix
     # add to global let block
-    burpProxy = pkgs.callPackage /home/dag/dev/burppackage {
+    burpProxy = pkgs.callPackage /PATH_TO_BURPPACKAGE {
       stdenv = pkgs.stdenv;
       fetchurl = pkgs.fetchurl;
     };  
