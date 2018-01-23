@@ -29,10 +29,10 @@ stdenv.mkDerivation {
     description = "Burp Suite Community Edition";
     longDescription = ''
       Burp Proxy is a standard penetration testing proxy server.
-      I provides tracking and manipulation of http traffic and
+      It provides tracking and manipulation of http traffic and
       is extensible via plugins.
     '';
-    license = "https://portswigger.net/burp/eula/community";
+    license = [ stdenv.lib.licenses.unfree https://portswigger.net/burp/eula/community ] ;
     homepage = https://portswigger.net/burp/communitydownload;
     maintainers = with stdenv.lib.maintainers; [ d4g ];
     platforms = stdenv.lib.platforms.unix;
